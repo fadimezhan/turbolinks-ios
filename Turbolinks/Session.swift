@@ -297,7 +297,8 @@ extension Session: WKNavigationDelegate {
 
         var shouldOpenURLExternally: Bool {
             let type = navigationAction.navigationType
-            return type == .linkActivated || (isMainFrameNavigation && type == .other)
+            NSLog("DEBUG: shouldOpenURLExternally navigationType: \(type.rawValue)")
+            return type == .linkActivated
         }
 
         var shouldReloadPage: Bool {
