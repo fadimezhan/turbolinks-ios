@@ -225,8 +225,6 @@ class ColdBootVisit: Visit, WKNavigationDelegate, WebViewPageLoadDelegate {
                 let error = NSError(code: .networkFailure, error: error as NSError)
                 self.delegate?.visit(self, requestDidFailWithError: error)
             }
-        } else {
-            cancelVisit()
         }
     }
 
